@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+.ziv{
+	padding: 20px;
+}
+
+
+.divlion{
+	width: 100%;
+	text-align: center;
+
+}
+
+
+
+.lion{
+	height:400px ;
+	width: 500px;
+	border: 7px solid orange;
+	margin: 0 auto;
+}
+
+
+
+
+img{
+
+	height:400px ;
+	width: 400px;
+	border: 7px solid orange;\
+	margin: 0 auto;
+
+}
+
+.catbro{
+	width: 100%;
+	text-align: center;
+
+}
+
+.kity{
+
+	text-align: center;
+}
+
+th, td{
+
+	border: 1px solid black;
+}
+
+
+h3{
+	text-align: center;
+	color: red;
+	border: 1px solid red;
+}
