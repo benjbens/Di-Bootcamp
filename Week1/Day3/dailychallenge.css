@@ -1,0 +1,47 @@
+section{
+	height: 100vh;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+div > div{
+	border: 2px solid black;
+	height: 50px;
+	width: 50px;
+	background-color: yellow;
+
+}
+
+
+.box{
+	
+	margin: 10px;	
+
+}
+
+.box2{
+	
+	margin: 25px;
+
+}
+
+
+
+
+
+
+.middle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+
+.left{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}

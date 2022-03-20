@@ -1,0 +1,26 @@
+section{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 100px;
+}
+
+
+
+
+
+
+.heading{
+	/*grid-template-rows: 1fr 1fr 1fr;*/
+	/**/
+	
+}
+
+.text{
+	background-color: lightgray;
+	text-align: center;
+}
+
+
+
+
+

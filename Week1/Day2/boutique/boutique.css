@@ -1,0 +1,71 @@
+nav{
+    
+}
+
+
+
+
+
+
+
+body{
+
+    background-image: url(https://img.wallpapersafari.com/desktop/1920/1080/99/9/mRK1qN.jpg);
+    margin: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+
+
+
+.logo{
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    left: 0px;
+}
+
+
+
+
+img {
+    width: 320px;
+    height: 220px;
+    margin: 10px;
+    transition: all 1s;
+}
+
+img:hover {
+        transform: scale(1.1);
+}
+
+
+
+
+.box{
+    border: 1px solid purple;
+    border-width: 1px;
+    display :inline-block;
+    text-align: center;
+    margin: 5px;
+}
+
+
+
+button{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 12px 28px;
+
+
+
+}
+
+
+
+

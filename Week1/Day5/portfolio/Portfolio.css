@@ -1,0 +1,88 @@
+body{
+
+}
+
+
+
+
+
+
+.profil{
+	background-image: url("https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/07/CSS-background-gradient-featured.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	padding: 200px;
+
+}
+
+
+.top{
+	color: white;
+	font-style: italic;
+	text-align: left;
+
+}
+
+
+.logo{
+	height: 50px;
+	width: 50px;
+}
+
+.button-nav-text{
+	display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+.middle{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 150px;
+
+}
+
+h5{
+	font-style: italic;
+}
+
+h2{
+	color: #33adff;
+}
+
+.heart{
+	height: 400px;
+	width: 400px;
+}
+
+
+
+
+.about{
+	color: orange;
+}
+
+
+footer{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.fa-brands{
+	font-size: 70px;
+	color: black;
+
+
+}
+
+
+
+	
+
+
+
