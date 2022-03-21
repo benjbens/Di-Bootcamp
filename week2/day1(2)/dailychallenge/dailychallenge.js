@@ -10,7 +10,7 @@ fruits.push("kiwi")
 console.log(fruits)
 fruits.splice(0, 1)
 console.log(fruits)
-const reversed = fruits.reverse();
+fruits.reverse();
 console.log(fruits);
 
 // Exercice 2
