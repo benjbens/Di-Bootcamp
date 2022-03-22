@@ -1,5 +1,5 @@
 
-let sen = `The moovie is not that bas, I like it`;
+let sen = `The moovie is not that bad, I like it`;
 let arr = sen.split(` `)
 
 let not = arr.indexOf(`not`);
