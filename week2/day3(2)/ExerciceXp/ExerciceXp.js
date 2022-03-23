@@ -80,6 +80,8 @@ console.log(building.numberOfRoomsAndRent.dan)
 
 
 
+
+
 // Exercice 6
 
 
