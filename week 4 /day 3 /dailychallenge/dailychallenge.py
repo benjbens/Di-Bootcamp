@@ -14,8 +14,8 @@ def encypt_func(txt, s):
             result += chr((ord(char) + s - 96) % 26 + 97)  
     return result  
 # check the above function  
-txt = "gjsofrns"  
-s = -4  
+txt = ""  
+s = 4  
   
 print("Plain txt : " + txt)  
 print("Shift pattern : " + str(s))  

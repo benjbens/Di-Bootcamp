@@ -83,12 +83,60 @@ disney_users_A = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
 # print({name: empty_list.index(name) for name in empty_list})
     
     
-empty_list = []
+# empty_list = []
 
-empty_list = [ ] 
-for carachtere in disney_users_A:
-    if carachtere[0] == "M" or carachtere[0] == "P":
-        empty_list.append(carachtere)
+# empty_list = [ ] 
+# for carachtere in disney_users_A:
+#     if carachtere[0] == "M" or carachtere[0] == "P":
+#         empty_list.append(carachtere)
 
 
-print({name: empty_list.index(name) for name in empty_list})
+# print({name: empty_list.index(name) for name in empty_list})
+
+# Exercice ninja 
+
+
+# users = {
+#     "benji" : "1234",
+#     "David" : "ABCD",
+#     "Meiron" : "1010",
+
+
+
+
+# }
+# password = input("input exit to break the loop\n")
+
+# while True:
+
+#     login = input("input exit to break the loop and input login to login\n")
+
+#     if login == "exit":
+#         break
+
+#     print("looping")
+
+
+#     if login == "login":
+#         username = input("input username\n")
+#         password = input("input password\n")
+
+#         print("you are now logged in")
+
+#         if username in users.keys() and password in users.values():
+#             print("you are already login")
+
+
+
+# def calculation(number1: int, number2: int):
+#     return number1 + number2 
+
+# res = calculation(30, 20)
+# print(res)
+
+def numbers(*args):
+    for arg in args:
+        print(arg*2)
+
+numbers(1, 2, 3)
+
