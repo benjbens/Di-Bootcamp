@@ -1,112 +1,65 @@
 
-#Implementation of Two Player Tic-Tac-Toe game in Python.
-
-''' We will make the board using dictionary 
-    in which keys will be the location(i.e : top-left,mid-right,etc.)
-    and initialliy it's values will be empty space and then after every move 
-    we will change the value according to player's choice of move. '''
-
-theBoard = {'7': ' ' , '8': ' ' , '9': ' ' ,
-            '4': ' ' , '5': ' ' , '6': ' ' ,
-            '1': ' ' , '2': ' ' , '3': ' ' }
-
-board_keys = []
-
-for key in theBoard:
-    board_keys.append(key)
-
-''' We will have to print the updated board after every move in the game and 
-    thus we will make a function in which we'll define the printBoard function
-    so that we can easily print the board everytime by calling this function. '''
-
-def printBoard(board):
-    print(board['7'] + '|' + board['8'] + '|' + board['9'])
-    print('-+-+-')
-    print(board['4'] + '|' + board['5'] + '|' + board['6'])
-    print('-+-+-')
-    print(board['1'] + '|' + board['2'] + '|' + board['3'])
-
-# Now we'll write the main function which has all the gameplay functionality.
-def game():
-
-    turn = 'X'
-    count = 0
 
 
-    for i in range(10):
-        printBoard(theBoard)
-        print("It's your turn," + turn + ".Move to which place?")
+choices = list(range(9))
 
-        move = input()        
-
-        if theBoard[move] == ' ':
-            theBoard[move] = turn
-            count += 1
-        else:
-            print("That place is already filled.\nMove to which place?")
-            continue
-
-        # Now we will check if player X or O has won,for every move after 5 moves. 
-        if count >= 5:
-            if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': # across the top
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")                
-                break
-            elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ': # across the middle
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")
-                break
-            elif theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ': # across the bottom
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")
-                break
-            elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ': # down the left side
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")
-                break
-            elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ': # down the middle
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")
-                break
-            elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ': # down the right side
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")
-                break 
-            elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ': # diagonal
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")
-                break
-            elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ': # diagonal
-                printBoard(theBoard)
-                print("\nGame Over.\n")                
-                print(" **** " +turn + " won. ****")
-                break 
-
-        # If neither X nor O wins and the board is full, we'll declare the result as 'tie'.
-        if count == 9:
-            print("\nGame Over.\n")                
-            print("It's a Tie!!")
-
-        # Now we have to change the player after every move.
-        if turn =='X':
-            turn = 'O'
-        else:
-            turn = 'X'        
+def board():
+    board = f"""
+    ----------
+    |{choices[0]}|{choices[1]}|{choices[2]}|
+    |{choices[3]}|{choices[4]}|{choices[5]}|
+    |{choices[6]}|{choices[7]}|{choices[8]}|
+    ----------
+    """
+    print(board)
+is_winner = False
+def make_move(player, choices):
+    slot_choice = int(input(f"place your '{player}': "))  
+    choices[slot_choice] = player
+     
     
-    # Now we will ask if player wants to restart the game or not.
-    restart = input("Do want to play Again?(y/n)")
-    if restart == "y" or restart == "Y":  
-        for key in board_keys:
-            theBoard[key] = " "
+def check_winner(choices):
+    is_winner = False
+    winner_sequences = [(0,1,2),(0,3,6),(6,4,2),(0,4,8),(1,4,7),(2,5,8),(3,4,5),(6,7,8)]
+    for slot1, slot2, slot3 in winner_sequences:
+        if choices[slot1] == choices[slot2] == choices[slot3]:
+            print(f"{choices[slot1]} won ")
+            is_winner = True
+            
+            break   
+    return is_winner
 
-        game()
+while True:
+    new_game = input("Do want to play a game or quit?(y/n)")
 
-if __name__ == "__main__":
-    game()
+    if new_game == "y":
+        pass
+
+    elif new_game == "n":
+        break
+
+    else:
+        continue
+
+
+    choices = list(range(9))
+
+    for turn in range(4):
+        
+        board()
+        make_move('X', choices)
+        if check_winner(choices): 
+            break 
+        board()
+        make_move('Y', choices)
+        
+        if check_winner(choices): 
+            break 
+
+    print("Starting new while loop")
+
+
+        
+
+
+
