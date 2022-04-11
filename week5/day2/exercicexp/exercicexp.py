@@ -74,3 +74,7 @@ dog1.fight(dog2)
 dog3.bark()
 
 
+# Exercice 3
+
+
+
