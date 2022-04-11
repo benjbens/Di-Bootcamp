@@ -1,3 +1,5 @@
+# Exercice 3
+
 from exercicexp import Dog
 import random
 
@@ -29,4 +31,5 @@ dog3 = PetDog("George",1,4)
 dog1.play(dog2)
 dog1.do_a_trick()
 dog2.do_a_trick()
+dog3.do_a_trick()
 dog3.do_a_trick()
