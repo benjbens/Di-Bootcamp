@@ -1,4 +1,4 @@
-# import datetime
+import datetime
 
 
 
@@ -28,15 +28,15 @@
 
 # Exercice 3
 
-# def amount_of(year, month, day):
-#     actual_datetime = datetime.datetime.now()
-#     date_born = datetime.datetime(year, month, day)
-#     years_alive = actual_datetime - date_born
-#     minutes = int(years_alive.total_seconds()/ 60) 
-#     print(minutes)
+def amount_of(year, month, day):
+    actual_datetime = datetime.datetime.now()
+    date_born = datetime.datetime(year, month, day)
+    years_alive = actual_datetime - date_born
+    minutes = int(years_alive) 
+    print(minutes)
 
 
-# amount_of(2003, 3, 4)
+amount_of(2003, 2, 20)
 
 
 # Exercice 6
