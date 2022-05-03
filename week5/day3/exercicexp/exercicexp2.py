@@ -32,7 +32,7 @@ def amount_of(year, month, day):
     actual_datetime = datetime.datetime.now()
     date_born = datetime.datetime(year, month, day)
     years_alive = actual_datetime - date_born
-    minutes = int(years_alive) 
+    minutes = int(years_alive.total_seconds()/ 60) 
     print(minutes)
 
 
